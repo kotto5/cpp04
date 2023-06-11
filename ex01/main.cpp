@@ -75,7 +75,6 @@ int main()
     // test_Cat_ref();
 
     // test_pdf();
-    // test_wrongcat();
-
+    test_wrongcat();
     return (0);
 }

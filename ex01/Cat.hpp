@@ -3,9 +3,12 @@
 
 #include "Animal.hpp"
 #include <iostream>
+#include "Brain.hpp"
 
 class Cat: public Animal
 {
+private:
+    Brain   *Brain_;
 public:
     Cat();
     Cat(const Cat &other);
