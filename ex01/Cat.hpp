@@ -5,8 +5,7 @@
 #include <iostream>
 #include "Brain.hpp"
 
-class Cat: public Animal
-{
+class Cat: public Animal {
 private:
     Brain   *Brain_;
 public:

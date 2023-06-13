@@ -7,7 +7,7 @@ OBJS = $(SRCS:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -rf $(OBJS)
@@ -20,7 +20,7 @@ re:
 run:
 
 debug:
-	$(MAKE) re CXXFLAGS='$(CXXFLAGS) -DDEBUG'
+	$(MAKE) re CXXFLAGS='$(CXXFLAGS) -fsanitize=address -DDEBUG'
 
 .PHONY: all clean re run
 

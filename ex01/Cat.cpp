@@ -6,7 +6,7 @@ Cat::Cat(){
     #endif
 }
 
-Cat::Cat(const Cat &other){
+Cat::Cat(const Cat &other): Animal(){
     #ifdef DEBUG
         std::cout << "Cat copy constructor called" << std::endl;
     #endif
@@ -21,6 +21,7 @@ Cat &Cat::operator=(const Cat &other){
     if (this != &other)
     {
         this->type = other.type;
+        this->Brain_ = other.Brain_;
     }
     return (*this);
 }

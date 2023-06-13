@@ -37,4 +37,4 @@ void    Animal::makeSound() const {
     std::cout << "Nothing to say" << std::endl;
 }
 
-const std::string    &Animal::getType() const {return (this->type); }
+const std::string    &Animal::getType() const {return (this->type);}
