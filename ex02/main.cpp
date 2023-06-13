@@ -91,15 +91,20 @@ void    test_localy(){
     }
 }
 
+void    testAnimalInstance(){
+    // Animal  animal;
+}
+
 int main()
 {
-    // test_pdf();
-    // testBaseRef();
-    // testLostBrainDog();
-    // testLostBrainCat();
-    // testArray();
-    // test_localy();
+    test_pdf();
+    testBaseRef();
+    testLostBrainDog();
+    testLostBrainCat();
+    testArray();
+    test_localy();
+    // testAnimalInstance();
 
-    // system("leaks exefile");
+    system("leaks exefile");
     return (0);
 }
