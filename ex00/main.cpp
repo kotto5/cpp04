@@ -45,6 +45,9 @@ void    test_pdf(){
         i->makeSound(); //will output the cat sound!
         j->makeSound();
         meta->makeSound();
+        delete meta;
+        delete j;
+        delete i;
     }
 }
 
@@ -68,14 +71,14 @@ void    test_wrongcat(){
 
 int main()
 {
-    // test_animal();
-    // test_dog();
+    test_animal();
+    test_dog();
 
-    // test_dog_ref();
-    // test_Cat_ref();
+    test_dog_ref();
+    test_Cat_ref();
 
-    // test_pdf();
-    // test_wrongcat();
+    test_pdf();
+    test_wrongcat();
 
     return (0);
 }

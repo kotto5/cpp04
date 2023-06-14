@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat(){
+Cat::Cat(): Animal(){
     #ifdef DEBUG
         std::cout << "cat Default constructor" << std::endl;
     #endif

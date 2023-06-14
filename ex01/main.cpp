@@ -5,24 +5,24 @@
 #include "WrongCat.hpp"
 #include <stdlib.h>
 
-void    test_leak(){
-    int* leakyArray = new int[1000000000]; // Allocate 1 million integers    std::cout << "Leaky int: " << *leakyInt << std::endl;
-    std::cout << leakyArray[0] << std::endl;
-}
+// void    test_leak(){
+//     int* leakyArray = new int[1000000000]; // Allocate 1 million integers    std::cout << "Leaky int: " << *leakyInt << std::endl;
+//     std::cout << leakyArray[0] << std::endl;
+// }
 
 void    test_pdf(){
-    {
-        Dog* j = new Dog();
-        j->setBrain();
-        j->printBrain();
-        delete j;
-    }
-    {
-        Cat* j = new Cat();
-        j->setBrain();
-        j->printBrain();
-        delete j;
-    }
+    // {
+    //     Dog* j = new Dog();
+    //     j->setBrain();
+    //     j->printBrain();
+    //     delete j;
+    // }
+    // {
+    //     Cat* j = new Cat();
+    //     j->setBrain();
+    //     j->printBrain();
+    //     delete j;
+    // }
 }
 
 void    testBaseRef(void){
@@ -93,13 +93,15 @@ void    test_localy(){
 
 int main()
 {
-    // test_pdf();
-    // testBaseRef();
-    // testLostBrainDog();
-    // testLostBrainCat();
-    // testArray();
-    // test_localy();
+    test_pdf();
+    testBaseRef();
+    testLostBrainDog();
 
-    // system("leaks exefile");
+    testLostBrainCat();
+    testArray();
+    test_localy();
+
+    // if (system("leaks exefile"))
+    //     return (1);
     return (0);
 }

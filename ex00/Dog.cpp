@@ -1,7 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog()
-{
+Dog::Dog(): Animal(){
     #ifdef DEBUG
         std::cout << "Dog constructor called" << std::endl;
     #endif
@@ -16,8 +15,7 @@ Dog::~Dog()
     #endif
 }
 
-Dog::Dog(const Dog &copy)
-{
+Dog::Dog(const Dog &copy): Animal(){
     #ifdef DEBUG
         std::cout << "Dog copy constructor called" << std::endl;
     #endif

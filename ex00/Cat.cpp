@@ -1,12 +1,12 @@
 #include "Cat.hpp"
 
-Cat::Cat(){
+Cat::Cat(): Animal(){
     #ifdef DEBUG
         std::cout << "cat Default constructor" << std::endl;
     #endif
 }
 
-Cat::Cat(const Cat &other){
+Cat::Cat(const Cat &other): Animal(){
     #ifdef DEBUG
         std::cout << "Cat copy constructor called" << std::endl;
     #endif

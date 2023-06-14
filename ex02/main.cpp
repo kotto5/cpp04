@@ -105,6 +105,7 @@ int main()
     test_localy();
     // testAnimalInstance();
 
-    system("leaks exefile");
+    if (system("leaks exefile"))
+        return (2);
     return (0);
 }

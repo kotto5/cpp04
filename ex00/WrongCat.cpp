@@ -6,7 +6,7 @@ WrongCat::WrongCat(){
     #endif
 }
 
-WrongCat::WrongCat(const WrongCat &other){
+WrongCat::WrongCat(const WrongCat &other): WrongAnimal(){
     #ifdef DEBUG
         std::cout << "WrongCat copy constructor called" << std::endl;
     #endif
