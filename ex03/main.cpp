@@ -54,10 +54,17 @@ void    testpdf(){
 
     me->use(0, *bob);
     me->use(1, *bob);
+    me->use(2, *bob);
+    me->use(3, *bob);
+    me->use(4, *bob);
 
     delete me;
     delete bob;
     delete src;
+}
+
+void    test5(){
+
 }
 
 int main(){
