@@ -64,7 +64,17 @@ void    testpdf(){
 }
 
 void    test5(){
+    IMateriaSource *src = new MateriaSource();
+    src->learnMateria(new Ice());
 
+    Character *me = new Character("me");
+
+    me->equip(src->createMateria("ice"));
+    me->equip(src->createMateria("ice"));
+
+    Character bob = *me;
+    delete me;
+    delete src;
 }
 
 int main(){
@@ -72,6 +82,7 @@ int main(){
     test2();
     test3();
     testpdf();
+    test5();
 
-    system("leaks -q exefile");
+    // system("leaks -q exefile");
 }
