@@ -4,8 +4,7 @@ Cat::Cat(): Animal(){
     #ifdef DEBUG
         std::cout << "cat Default constructor" << std::endl;
     #endif
-
-	this->type = "Dog";
+	this->type = "Cat";
 }
 
 Cat::Cat(const Cat &other): Animal(){
