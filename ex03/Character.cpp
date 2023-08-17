@@ -19,6 +19,10 @@ Character::Character(const std::string &name): name_(name){
 
 Character::Character(const Character &copy){
     std::cout << "Character copy constructor called" << std::endl;
+    for (int i = 0; i < MAX_EQUIP_SLOT; i++)
+    {
+        this->equipSlot[i] = NULL;
+    }
     *this = copy;
 }
 
@@ -34,7 +38,8 @@ Character &Character::operator=(const Character &copy){
                 delete this->equipSlot[i];
                 this->equipSlot[i] = NULL;
             }
-            this->equipSlot[i] = copy.equipSlot[i]->clone();
+            if (copy.equipSlot[i])
+                this->equipSlot[i] = copy.equipSlot[i]->clone();
         }
     }
     return (*this);
@@ -44,14 +49,10 @@ Character::~Character(){
     std::cout << "Character destructor called" << std::endl;
     for (int i = 0; i < MAX_EQUIP_SLOT; i++)
     {
-        if (this->equipSlot[i])
-        {
-            delete this->equipSlot[i];
-            this->equipSlot[i] = NULL;
-        }
+        delete this->equipSlot[i];
+        this->equipSlot[i] = NULL;
     }
 }
-
 std::string const & Character::getName() const{
     return (this->name_);
 }
