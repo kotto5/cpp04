@@ -1,10 +1,10 @@
 #include "Cat.hpp"
 
-Cat::Cat(): Animal(){
+Cat::Cat(){
     #ifdef DEBUG
         std::cout << "cat Default constructor" << std::endl;
     #endif
-    this->type = "Dog";
+    this->type = "Cat";
     this->Brain_ = NULL;
 }
 
@@ -12,18 +12,14 @@ Cat::Cat(const Cat &other): Animal(){
     #ifdef DEBUG
         std::cout << "Cat copy constructor called" << std::endl;
     #endif
-    this->type = "Dog";
     this->Brain_ = NULL;
     *this = other;
 }
 
 Cat::~Cat(){
     std::cout << "cat destructor" << std::endl;
-    if (this->Brain_)
-    {
-        delete this->Brain_;
-        this->Brain_ = NULL;
-    }
+    delete this->Brain_;
+    this->Brain_ = NULL;
 }
 
 Cat &Cat::operator=(const Cat &other){
@@ -31,10 +27,11 @@ Cat &Cat::operator=(const Cat &other){
         return (*this);
     if (other.Brain_)
     {
-        if (this->Brain_)
-            delete Brain_;
+        delete Brain_;
+        Brain_ = NULL;
         this->Brain_ = new Brain(*other.Brain_);
     }
+    this->type = other.type;
     return (*this);
 }
 
