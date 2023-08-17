@@ -1,6 +1,7 @@
 #include "Dog.hpp"
 
-Dog::Dog(): Animal(){
+Dog::Dog()
+{
     #ifdef DEBUG
         std::cout << "Dog constructor called" << std::endl;
     #endif
@@ -13,7 +14,6 @@ Dog::Dog(const Dog &ohter): Animal()
     #ifdef DEBUG
         std::cout << "Dog copy constructor called" << std::endl;
     #endif
-    this->type = "Dog";
     this->Brain_ = NULL;
     *this = ohter;
 }
@@ -23,11 +23,8 @@ Dog::~Dog()
     #ifdef DEBUG
         std::cout << "Dog destructor called" << std::endl;
     #endif
-    if (this->Brain_)
-    {
-        delete this->Brain_;
-        this->Brain_ = NULL;
-    }
+    delete this->Brain_;
+    this->Brain_ = NULL;
 }
 
 Dog &Dog::operator=(const Dog &other){
@@ -35,10 +32,10 @@ Dog &Dog::operator=(const Dog &other){
         return (*this);
     if (other.Brain_)
     {
-        if (this->Brain_)
-            delete Brain_;
+        delete Brain_;
         this->Brain_ = new Brain(*other.Brain_);
     }
+    this->type = other.type;
     return (*this);
 }
 
