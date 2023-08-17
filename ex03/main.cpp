@@ -87,11 +87,11 @@ void    test5(){
 }
 
 int main(){
-    // test1();
-    // test2();
-    // test3();
+    test1();
+    test2();
+    test3();
     testpdf();
     test5();
 
-    // system("leaks -q exefile");
+    system("leaks -q exefile");
 }
