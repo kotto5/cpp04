@@ -31,7 +31,7 @@ Cat &Cat::operator=(const Cat &other){
         Brain_ = NULL;
         this->Brain_ = new Brain(*other.Brain_);
     }
-    this->type = other.type;
+	this->type = other.type;
     return (*this);
 }
 

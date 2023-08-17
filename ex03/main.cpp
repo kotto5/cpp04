@@ -51,12 +51,14 @@ void    testpdf(){
     me->equip(tmp);
 
     ICharacter *bob = new Character("bob");
+	// bob->equip(tmp);
+    // me->use(0, *bob);
+    // me->use(1, *bob);
+    // me->use(2, *bob);
+    // me->use(3, *bob);
+    // me->use(4, *bob);
 
-    me->use(0, *bob);
-    me->use(1, *bob);
-    me->use(2, *bob);
-    me->use(3, *bob);
-    me->use(4, *bob);
+	*me = *bob;
 
     delete me;
     delete bob;
@@ -85,9 +87,9 @@ void    test5(){
 }
 
 int main(){
-    test1();
-    test2();
-    test3();
+    // test1();
+    // test2();
+    // test3();
     testpdf();
     test5();
 

@@ -5,7 +5,7 @@ Dog::Dog(): Animal(){
         std::cout << "Dog constructor called" << std::endl;
     #endif
 
-    this->type = "Dog";
+	this->type = "Dog";
 }
 
 Dog::~Dog()

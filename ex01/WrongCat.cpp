@@ -4,6 +4,7 @@ WrongCat::WrongCat(){
     #ifdef DEBUG
         std::cout << "Wrongcat Default constructor" << std::endl;
     #endif
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat &other): WrongAnimal(){
