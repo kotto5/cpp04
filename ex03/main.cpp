@@ -70,6 +70,13 @@ void    test5(){
     Character *me = new Character("me");
 
     me->equip(src->createMateria("ice"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
+    me->equip(src->createMateria("cure"));
     me->equip(src->createMateria("ice"));
 
     Character bob = *me;
