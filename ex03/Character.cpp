@@ -33,14 +33,8 @@ Character &Character::operator=(const Character &copy){
         this->name_ = copy.name_;
         for (int i = 0; i < MAX_EQUIP_SLOT; i++)
         {
-			std::cout << "equipSlot[" << i << "] = " << &this->equipSlot[i] << std::endl;
-			std::cout << "equipSlot[" << i << "] = " << &copy.equipSlot[i] << std::endl;
-			// if (copy.equipSlot[i] == NULL)
-			// 	continue;
-            if (this->equipSlot[i])
-                delete this->equipSlot[i];
-                this->equipSlot[i] = NULL;
-            }
+            delete this->equipSlot[i];
+            this->equipSlot[i] = NULL;
             if (copy.equipSlot[i])
                 this->equipSlot[i] = copy.equipSlot[i]->clone();
         }
